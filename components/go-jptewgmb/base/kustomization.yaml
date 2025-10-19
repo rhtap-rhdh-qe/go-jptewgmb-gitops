@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-jptewgmb
+  janus-idp.io/tekton: go-jptewgmb
+  backstage.io/kubernetes-id: go-jptewgmb
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-jptewgmb
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
